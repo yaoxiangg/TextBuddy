@@ -9,8 +9,8 @@ import java.util.Scanner;
 /**
  * This class run a program which allows user to use operations such as add, display, delete, clear, exit on a text file.
  * User's input will be saved into a .txt file.
- * To run: java -jar textbuddy.jar [file name]
- *    e.g: java -jar textbuddy.jar myfile.txt
+ * To run: java textbuddy [file name]
+ *    e.g: java textbuddy myfile.txt
  * 
  * @author Ter Yao Xiang A0110751W
  */
