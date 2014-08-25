@@ -9,8 +9,8 @@ import java.util.Scanner;
 /**
  * This class run a program which allows user to use operations such as add, display, delete, clear, exit on a text file.
  * User's input will be saved into a .txt file.
- * To run: java -jar textbuddy.jar [file name]
- *    e.g: java -jar textbuddy.jar myfile.txt
+ * To run: java TextBuddy [file name]
+ *    e.g: java TextBuddy myfile.txt
  * 
  * @author Ter Yao Xiang A0110751W
  */
@@ -56,10 +56,10 @@ public class TextBuddy {
         } while (true);
     }
     
-    private static void processCommand(String fileName, String[] input) throws IOException {
-        switch (input[0]) {
+    private static void processCommand(String fileName, String[] inputs) throws IOException {
+        switch (inputs[0]) {
             case "add":
-                addString(fileName, input);
+                addString(fileName, inputs);
                 break;
                 
             case "display":
@@ -67,7 +67,7 @@ public class TextBuddy {
                 break;
                 
             case "delete":
-                deleteLine(fileName, input);
+                deleteLine(fileName, inputs);
                 break;
                 
             case "clear":
@@ -120,10 +120,10 @@ public class TextBuddy {
 
     //This method will delete the specified line in the text file.
     //Deletion is done in a temporary file before having it renamed and replace the original file.
-    private static void deleteLine(String fileName, String[] input) throws IOException {
+    private static void deleteLine(String fileName, String[] inputs) throws IOException {
         Integer lineDelete;
         try {
-            lineDelete = Integer.parseInt(input[1]);
+            lineDelete = Integer.parseInt(inputs[1]);
         } catch (Exception e) {
             System.out.println("No line specified!");
             return;
